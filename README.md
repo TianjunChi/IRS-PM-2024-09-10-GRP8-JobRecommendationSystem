@@ -6,4 +6,3 @@
 
 Test for push repo
 
-try
