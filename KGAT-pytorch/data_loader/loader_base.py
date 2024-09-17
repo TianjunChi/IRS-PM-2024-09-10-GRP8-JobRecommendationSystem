@@ -99,7 +99,7 @@ class DataLoaderBase(object):
     def generate_cf_batch(self, user_dict, batch_size):
         exist_users = user_dict.keys()
         if batch_size <= len(exist_users):
-            batch_user = random.sample(exist_users, batch_size)
+            batch_user = random.sample(list(exist_users), batch_size)
         else:
             batch_user = [random.choice(exist_users) for _ in range(batch_size)]
 
@@ -150,7 +150,7 @@ class DataLoaderBase(object):
     def generate_kg_batch(self, kg_dict, batch_size, highest_neg_idx):
         exist_heads = kg_dict.keys()
         if batch_size <= len(exist_heads):
-            batch_head = random.sample(exist_heads, batch_size)
+            batch_head = random.sample(list(exist_heads), batch_size)
         else:
             batch_head = [random.choice(exist_heads) for _ in range(batch_size)]
 
