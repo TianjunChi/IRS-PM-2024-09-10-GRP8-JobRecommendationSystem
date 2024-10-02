@@ -6,6 +6,7 @@
 * `entity_list.txt`: consists of user ids, job ids and job attribute values
 * `item_list.txt`: consists of job ids and mapped id
 * `user_job_mapping.txt`: consisits of user-job interactions
+
 Result:https://drive.google.com/drive/folders/1cq1xRHbMgu-eXbBJS3-L9SbCTnPjGWoA?usp=drive_link
 ## Section2 [Shi Diwei]Resume Information Extraction
 ### 2.1 pdf/word Resume to picture
