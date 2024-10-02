@@ -5,7 +5,8 @@
 * `job_data_process.ipynb`: clean job dataset, generate job-user interactions, train.txt, item_list, entity_list for model training use
 * `entity_list.txt`: consists of user ids, job ids and job attribute values
 * `item_list.txt`: consists of job ids and mapped id
-* `user_job_mapping.txt`: consisits of user-job interactions
+* `train.txt`: training set (of user-job interactions, each row: the jobs related to one user)
+* `test.txt`: testing set
 
 Result:https://drive.google.com/drive/folders/1cq1xRHbMgu-eXbBJS3-L9SbCTnPjGWoA?usp=drive_link
 ## Section2 [Shi Diwei]Resume Information Extraction
