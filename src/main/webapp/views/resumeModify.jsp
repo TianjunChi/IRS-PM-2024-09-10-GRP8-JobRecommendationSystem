@@ -42,7 +42,7 @@
     </form>
 
     <!-- Part 2: Display User Information -->
-    <div id="userInfo" style="display: none;">
+    <div id="userInfo">
         <h2>Recognized User Information</h2>
         <form id="userInfoForm" action="/user/confirmResume" method="post">
             <label for="userName">Name:</label>
@@ -55,25 +55,59 @@
             <input type="text" id="emailAddress" name="emailAddress" value="${user.emailAddress}" required>
 
             <label for="degree">Degree:</label>
-            <input type="text" id="degree" name="degree" value="${user.degree}">
+            <select id="degree" name="degree">
+                <option value="Associate degree">Associate degree</option>
+                <option value="Bachelor’s degree (BA, BS, B.Eng., etc.)">Bachelor’s degree (BA, BS, B.Eng., etc.)</option>
+                <option value="Master’s degree (MA, MS, M.Eng., MBA, etc.)">Master’s degree (MA, MS, M.Eng., MBA, etc.)</option>
+                <option value="Other doctoral degree (Ph.D, Ed.D., etc.)">Other doctoral degree (Ph.D, Ed.D., etc.)</option>
+                <option value="Primary/elementary school">Primary/elementary school</option>
+                <option value="Professional degree (JD, MD, etc.)">Professional degree (JD, MD, etc.)</option>
+                <option value="Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)">Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)</option>
+                <option value="Some college/university study without earning a degree">Some college/university study without earning a degree</option>
+            </select>
+
+            <br>
 
             <label for="major">Major:</label>
-            <input type="text" id="major" name="major" value="${user.major}">
+            <select id="major" name="major">
+                <option value="A business discipline (ex. accounting, finance, marketing)">A business discipline (ex. accounting, finance, marketing)</option>
+                <option value="A health science (ex. nursing, pharmacy, radiology)">A health science (ex. nursing, pharmacy, radiology)</option>
+                <option value="A humanities discipline (ex. literature, history, philosophy)">A humanities discipline (ex. literature, history, philosophy)</option>
+                <option value="A natural science (ex. biology, chemistry, physics)">A natural science (ex. biology, chemistry, physics)</option>
+                <option value="A social science (ex. anthropology, psychology, political science)">A social science (ex. anthropology, psychology, political science)</option>
+                <option value="Another engineering discipline (ex. civil, electrical, mechanical)">Another engineering discipline (ex. civil, electrical, mechanical)</option>
+                <option value="Computer science, computer engineering, or software engineering">Computer science, computer engineering, or software engineering</option>
+                <option value="Fine arts or performing arts (ex. graphic design, music, studio art)">Fine arts or performing arts (ex. graphic design, music, studio art)</option>
+                <option value="Information systems, information technology, or system administration">Information systems, information technology, or system administration</option>
+                <option value="Web development or web design">Web development or web design</option>
+                <option value="Mathematics or statistics">Mathematics or statistics</option>
+            </select>
+
+            <br>
 
             <label for="skills">Skills:</label>
             <input type="text" id="skills" name="skills" value="${user.skills}">
 
-            <label for="projectExperience">Project Experience:</label>
-            <input type="text" id="projectExperience" name="projectExperience" value="${user.projectExperience}">
+            <label for="yearsCoding">Years Coding:</label>
+            <select id="yearsCoding" name="yearsCoding">
+                <option value="0-2 years">0-2 years</option>
+                <option value="3-5 years">3-5 years</option>
+                <option value="6-8 years">6-8 years</option>
+                <option value="9-11 years">9-11 years</option>
+                <option value="12-14 years">12-14 years</option>
+                <option value="12-14 years">15-17 years</option>
+                <option value="12-14 years">18-20 years</option>
+                <option value="12-14 years">21-23 years</option>
+                <option value="12-14 years">24-26 years</option>
+                <option value="12-14 years">27-29 years</option>
+                <option value="12-14 years">30 or more years</option>
+            </select>
+
+            <br>
 
             <label for="hometown">Hometown:</label>
             <input type="text" id="hometown" name="hometown" value="${user.hometown}">
 
-            <label for="school">School:</label>
-            <input type="text" id="school" name="school" value="${user.school}">
-
-            <label for="preference">Preference:</label>
-            <input type="text" id="preference" name="preference" value="${user.preference}">
 
             <label for="hobby">Hobby:</label>
             <input type="text" id="hobby" name="hobby" value="${user.hobby}">
@@ -81,8 +115,6 @@
             <label for="desiredJob">Desired Job:</label>
             <input type="text" id="desiredJob" name="desiredJob" value="${user.desiredJob}">
 
-            <label for="salary">Expected Salary:</label>
-            <input type="text" id="salary" name="salary" value="${user.salary}">
 
             <input type="submit" value="Confirm">
         </form>
