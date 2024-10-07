@@ -4,7 +4,7 @@ import argparse
 def parse_kgat_args():
     parser = argparse.ArgumentParser(description="Run KGAT.")
 
-    parser.add_argument('--seed', type=int, default=2019,
+    parser.add_argument('--seed', type=int, default=2024,
                         help='Random seed.')
 
     parser.add_argument('--data_name', nargs='?', default='ours',
