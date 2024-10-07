@@ -7,26 +7,71 @@
     <title>Resume Recognition</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #e9ecef;
         }
         .container {
             width: 50%;
             margin: 50px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
+            color: #343a40;
+            margin-bottom: 20px;
         }
-        input[type="file"], input[type="text"], input[type="submit"] {
-            width: 100%;
+        h2 {
+            margin-top: 30px;
+            color: #495057;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+            color: #495057;
+        }
+        input[type="file"], input[type="text"], input[type="submit"], select {
             padding: 10px;
-            margin: 10px 0;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        input[type="file"] {
+            border: none;
+            background-color: #ffffff;
+        }
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: #80bdff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        .hidden {
+            display: none;
+        }
+        .container:after {
+            content: '';
+            display: table;
+            clear: both;
         }
     </style>
 </head>
