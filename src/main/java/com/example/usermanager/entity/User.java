@@ -22,11 +22,9 @@ public class User {
     private String degree;  //formalEducation
     private String major;   //underMajor
     private String skills;
-    private String projectExperience;
-    private String school;
+    private String yearsCoding;
     private String hobby;
     private String desiredJob;   //DevType
-    private Double salary;
 
     public User(String phoneNumber, String password) {
         this.phoneNumber = phoneNumber;

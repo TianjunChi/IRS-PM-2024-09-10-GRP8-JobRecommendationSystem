@@ -72,11 +72,31 @@ public class UserController {
     }
 
     @PostMapping("/confirmResume")
-    public String confirmResume(@ModelAttribute User user,HttpSession session){
-        if(!userService.save(user)){
+    public String confirmResume(@RequestParam String userName,
+                                @RequestParam String phoneNumber,
+                                @RequestParam String emailAddress,
+                                @RequestParam String degree,
+                                @RequestParam String major,
+                                @RequestParam String skills,
+                                @RequestParam String yearsCoding,
+                                @RequestParam String hometown,
+                                @RequestParam String hobby,
+                                @RequestParam String desiredJob,HttpSession session){
+        User oldUser = (User)session.getAttribute("user");
+        oldUser.setUserName(userName);
+        oldUser.setPhoneNumber(phoneNumber);
+        oldUser.setEmailAddress(emailAddress);
+        oldUser.setDegree(degree);
+        oldUser.setMajor(major);
+        oldUser.setSkills(skills);
+        oldUser.setYearsCoding(yearsCoding);
+        oldUser.setHometown(hometown);
+        oldUser.setHobby(hobby);
+        oldUser.setDesiredJob(desiredJob);
+        if(!userService.save(oldUser)){
             log.info("save user-info error");
         }
-        session.setAttribute("user",user);
+        session.setAttribute("user",oldUser);
         return "redirect:/mainPage";
     }
 }
