@@ -7,6 +7,7 @@
 * `item_list.txt`: consists of job ids and mapped id
 * `train.txt`: training set (of user-job interactions, each row: the jobs related to one user)
 * `test.txt`: testing set
+* `relation.txt`: relationship list to construct knowledge graph
 
 Result:https://drive.google.com/drive/folders/1cq1xRHbMgu-eXbBJS3-L9SbCTnPjGWoA?usp=drive_link
 ## Section2 [Shi Diwei]Resume Information Extraction
