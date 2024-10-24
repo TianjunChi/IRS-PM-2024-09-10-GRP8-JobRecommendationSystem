@@ -22,8 +22,9 @@ Result:https://drive.google.com/drive/folders/1cq1xRHbMgu-eXbBJS3-L9SbCTnPjGWoA?
 * `train.txt`: the training data
 #### 3.1.2 Model Output
 * `cf_scores.npy`: Recommendation for each item by each user
-### 3.2 New user recommendation
+### 3.2 New User Recommendation
+* `job_clean.csv`: the cleaned job data
 * `user_clean.csv`: the cleaned user data
-* `user_precessed.ipynb`: process user data into onehot or list
+* `new_user.ipynb`: process user data into onehot or list and recommend jobs
 ## Section4 [Feng Yuan]Web Development
 ### 4.1 Web UI
