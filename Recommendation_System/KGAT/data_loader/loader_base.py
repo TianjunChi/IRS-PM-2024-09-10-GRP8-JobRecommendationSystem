@@ -101,7 +101,7 @@ class DataLoaderBase(object):
         if batch_size <= len(exist_users):
             batch_user = random.sample(list(exist_users), batch_size)
         else:
-            batch_user = [random.choice(exist_users) for _ in range(batch_size)]
+            batch_user = [random.choice(list(exist_users)) for _ in range(batch_size)]
 
         batch_pos_item, batch_neg_item = [], []
         for u in batch_user:
