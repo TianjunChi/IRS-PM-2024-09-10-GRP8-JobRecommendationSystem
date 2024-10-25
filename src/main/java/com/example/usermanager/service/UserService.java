@@ -7,4 +7,6 @@ public interface UserService extends IService<User> {
     User getUserByPhoneNumber(String phoneNumber);
 
     User getUserByPassword(String phoneNumber, String password);
+
+    boolean updateUser(User user);
 }

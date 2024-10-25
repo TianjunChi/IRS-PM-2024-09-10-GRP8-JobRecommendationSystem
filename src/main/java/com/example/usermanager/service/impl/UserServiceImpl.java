@@ -12,6 +12,11 @@ import javax.annotation.Resource;
 
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements UserService {
+    @Override
+    public boolean updateUser(User user) {
+        return userMapper.updateUser(user);
+    }
+
     @Resource
     UserMapper userMapper;
 

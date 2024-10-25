@@ -9,4 +9,20 @@
     <select id="getUserByPassword" resultType="com.example.usermanager.entity.User">
         select * from my_user where phone_number = #{phoneNumber} and passwd = #{password}
     </select>
+
+    <update id="updateUser" parameterType="com.example.usermanager.entity.User">
+        UPDATE my_user
+        SET
+            user_name = #{userName},
+            phone_number = #{phoneNumber},
+            email_address = #{emailAddress},
+            hometown = #{hometown},
+            degree = #{degree},
+            major = #{major},
+            skills = #{skills},
+            years_coding = #{yearsCoding},
+            hobby = #{hobby},
+            desired_job = #{desiredJob}
+        WHERE user_id = #{userId}
+    </update>
 </mapper>

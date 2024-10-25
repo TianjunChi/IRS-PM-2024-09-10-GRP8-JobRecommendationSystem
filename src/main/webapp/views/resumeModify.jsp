@@ -10,31 +10,27 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e9ecef;
+            background-color: #f4f6f9;
         }
         .container {
             width: 50%;
             margin: 50px auto;
-            background-color: white;
+            background-color: #ffffff;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        h1, h2 {
             text-align: center;
             color: #343a40;
             margin-bottom: 20px;
-        }
-        h2 {
-            margin-top: 30px;
-            color: #495057;
         }
         form {
             display: flex;
             flex-direction: column;
         }
         label {
-            margin: 10px 0 5px 0;
+            margin: 10px 0 5px;
             font-weight: bold;
             color: #495057;
         }
@@ -48,13 +44,13 @@
             background-color: #f8f9fa;
         }
         input[type="submit"] {
-            background-color: #28a745;
+            background-color: #007bff;
             color: white;
             cursor: pointer;
             transition: background-color 0.3s;
         }
         input[type="submit"]:hover {
-            background-color: #218838;
+            background-color: #0056b3;
         }
         input[type="file"] {
             border: none;
@@ -65,13 +61,11 @@
             border-color: #80bdff;
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
-        .hidden {
-            display: none;
-        }
-        .container:after {
-            content: '';
-            display: table;
-            clear: both;
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -87,10 +81,10 @@
     </form>
 
     <!-- Part 2: Display User Information -->
-    <div id="userInfo">
+    <div id="userInfo" >
         <h2>Recognized User Information</h2>
         <form id="userInfoForm" action="/user/confirmResume" method="post">
-            <label for="userName">Name:</label>
+            <%--@declare id="hobby"--%><label for="userName">Name:</label>
             <input type="text" id="userName" name="userName" value="${user.userName}" required>
 
             <label for="phoneNumber">Phone:</label>
@@ -111,8 +105,6 @@
                 <option value="Some college/university study without earning a degree">Some college/university study without earning a degree</option>
             </select>
 
-            <br>
-
             <label for="major">Major:</label>
             <select id="major" name="major">
                 <option value="A business discipline (ex. accounting, finance, marketing)">A business discipline (ex. accounting, finance, marketing)</option>
@@ -128,8 +120,6 @@
                 <option value="Mathematics or statistics">Mathematics or statistics</option>
             </select>
 
-            <br>
-
             <label for="skills">Skills:</label>
             <input type="text" id="skills" name="skills" value="${user.skills}">
 
@@ -140,26 +130,27 @@
                 <option value="6-8 years">6-8 years</option>
                 <option value="9-11 years">9-11 years</option>
                 <option value="12-14 years">12-14 years</option>
-                <option value="12-14 years">15-17 years</option>
-                <option value="12-14 years">18-20 years</option>
-                <option value="12-14 years">21-23 years</option>
-                <option value="12-14 years">24-26 years</option>
-                <option value="12-14 years">27-29 years</option>
-                <option value="12-14 years">30 or more years</option>
+                <option value="15-17 years">15-17 years</option>
+                <option value="18-20 years">18-20 years</option>
+                <option value="21-23 years">21-23 years</option>
+                <option value="24-26 years">24-26 years</option>
+                <option value="27-29 years">27-29 years</option>
+                <option value="30 or more years">30 or more years</option>
             </select>
-
-            <br>
 
             <label for="hometown">Hometown:</label>
             <input type="text" id="hometown" name="hometown" value="${user.hometown}">
 
-
             <label for="hobby">Hobby:</label>
-            <input type="text" id="hobby" name="hobby" value="${user.hobby}">
+            <div class="radio-group">
+                <input type="radio" id="hobbyTrue" name="hobby" value="true" ${user.hobby == 'true' ? 'checked' : ''}>
+                <label for="hobbyTrue">True</label>
+                <input type="radio" id="hobbyFalse" name="hobby" value="false" ${user.hobby == 'false' ? 'checked' : ''}>
+                <label for="hobbyFalse">False</label>
+            </div>
 
             <label for="desiredJob">Desired Job:</label>
             <input type="text" id="desiredJob" name="desiredJob" value="${user.desiredJob}">
-
 
             <input type="submit" value="Confirm">
         </form>
@@ -174,3 +165,4 @@
 </script>
 </body>
 </html>
+

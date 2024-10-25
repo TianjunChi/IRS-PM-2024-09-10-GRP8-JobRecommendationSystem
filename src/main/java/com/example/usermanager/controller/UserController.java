@@ -94,8 +94,8 @@ public class UserController {
         oldUser.setHometown(hometown);
         oldUser.setHobby(hobby);
         oldUser.setDesiredJob(desiredJob);
-        if(!userService.save(oldUser)){
-            log.info("save user-info error");
+        if(!userService.updateUser(oldUser)){
+            log.info("update user-info error");
         }
         session.setAttribute("user",oldUser);
         return "redirect:/mainPage";
