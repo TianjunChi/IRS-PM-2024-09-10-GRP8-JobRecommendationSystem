@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,12 +28,11 @@
         .container {
             display: flex;
             margin: 20px;
-            flex-wrap: wrap;
+            flex-direction: column; /* 修改为列布局 */
         }
         .sidebar {
-            flex: 1;
             max-width: 250px;
-            margin-right: 20px;
+            margin-bottom: 20px;
         }
         .sidebar .btn {
             display: block;
@@ -51,9 +51,8 @@
             background-color: #e6b800;
         }
         .job-list {
-            flex: 3;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: flex;
+            flex-direction: column; /* 单列布局 */
             gap: 20px;
         }
         .job-item {
@@ -63,7 +62,8 @@
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
+            text-align: left;
+            width: 100%; /* 占满容器宽度 */
         }
         .job-item:hover {
             transform: translateY(-5px);
@@ -89,15 +89,6 @@
         }
         .job-item .details strong {
             color: #333;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .sidebar {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
         }
     </style>
 </head>
@@ -131,5 +122,7 @@
 </div>
 </body>
 </html>
+
+
 
 

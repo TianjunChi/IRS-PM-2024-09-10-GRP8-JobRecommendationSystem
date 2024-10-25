@@ -30,7 +30,7 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/register")
-    public String register(@RequestParam("username") String phoneNumber,
+    public String register(@RequestParam("phoneNumber") String phoneNumber,
                            @RequestParam("password") String password,
                            RedirectAttributes redirectAttributes){
         User userByPhoneNumber = userService.getUserByPhoneNumber(phoneNumber);
@@ -38,12 +38,13 @@ public class UserController {
             throw new UserAlreadyExistException("PhoneNumber already exists: " + phoneNumber);
         }
         User user = new User(phoneNumber, password);
+        userService.save(user);
         redirectAttributes.addFlashAttribute("message", "Registration successful. Please log in.");
         return "redirect:/login";
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam("username") String phoneNumber,
+    public String login(@RequestParam("phoneNumber") String phoneNumber,
                         @RequestParam("password") String password,
                         RedirectAttributes redirectAttributes,
                         HttpSession session){

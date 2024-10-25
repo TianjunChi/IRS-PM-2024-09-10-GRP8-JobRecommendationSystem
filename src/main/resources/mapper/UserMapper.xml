@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.recommend.mapper.UserMapper">
+<mapper namespace="com.example.usermanager.mapper.UserMapper">
     <select id="getUserByPhoneNumber" resultType="com.example.usermanager.entity.User">
-        select * from User where phoneNumber = #{phoneNumber}
+        select * from my_user where phone_number = #{phoneNumber}
     </select>
 
     <select id="getUserByPassword" resultType="com.example.usermanager.entity.User">
-        select * from User where phoneNumber = #{phoneNumber} and password = #{password}
+        select * from my_user where phone_number = #{phoneNumber} and passwd = #{password}
     </select>
 </mapper>
