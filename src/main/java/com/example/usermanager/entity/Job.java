@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Job {
     private String jobId;
     private String jobTitle;
@@ -17,5 +16,5 @@ public class Job {
     private String skills;  //CONTENT-BASED
     private String location;
     private String employmentType; // Full-time, Part-time
-    private double salary;
+    private String salary;
 }

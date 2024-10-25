@@ -10,4 +10,6 @@ public interface UserMapper extends BaseMapper<User> {
     public User getUserByPhoneNumber(String phoneNumber);
 
     public User getUserByPassword(String phoneNumber, String password);
+
+    boolean updateUser(User user);
 }
