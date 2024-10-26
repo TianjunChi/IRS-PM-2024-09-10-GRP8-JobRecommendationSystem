@@ -16,12 +16,12 @@ def parse_kgat_args():
                         help='0: No pretrain, 1: Pretrain with the learned embeddings, 2: Pretrain with stored model.')
     parser.add_argument('--pretrain_embedding_dir', nargs='?', default='datasets/pretrain/',
                         help='Path of learned embeddings.')
-    parser.add_argument('--pretrain_model_path', nargs='?', default='trained_model/KGAT/ours/pretrain0/model_epoch7.pth',
+    parser.add_argument('--pretrain_model_path', nargs='?', default='trained_model/KGAT/ours/pretrain0/model_epoch33.pth',
                         help='Path of stored model.')
 
-    parser.add_argument('--cf_batch_size', type=int, default=8,
+    parser.add_argument('--cf_batch_size', type=int, default=64,
                         help='CF batch size.')
-    parser.add_argument('--kg_batch_size', type=int, default=64,
+    parser.add_argument('--kg_batch_size', type=int, default=128,
                         help='KG batch size.')
     parser.add_argument('--test_batch_size', type=int, default=10,
                         help='Test batch size (the user number to test every batch).')
@@ -40,12 +40,12 @@ def parse_kgat_args():
     parser.add_argument('--mess_dropout', nargs='?', default='[0.1, 0.1, 0.1]',
                         help='Dropout probability w.r.t. message dropout for each deep layer. 0: no dropout.')
 
-    parser.add_argument('--kg_l2loss_lambda', type=float, default=1e-6,
+    parser.add_argument('--kg_l2loss_lambda', type=float, default=1e-5,
                         help='Lambda when calculating KG l2 loss.')
-    parser.add_argument('--cf_l2loss_lambda', type=float, default=1e-6,
+    parser.add_argument('--cf_l2loss_lambda', type=float, default=1e-5,
                         help='Lambda when calculating CF l2 loss.')
 
-    parser.add_argument('--lr', type=float, default=0.00001,
+    parser.add_argument('--lr', type=float, default=0.0001,
                         help='Learning rate.')
     parser.add_argument('--n_epoch', type=int, default=1000,
                         help='Number of epoch.')
