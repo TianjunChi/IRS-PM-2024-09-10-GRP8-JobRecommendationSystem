@@ -22,7 +22,7 @@ public class CommunicateWithPython {
         }
         try {
             // Python 端的 API 地址
-            URL url = new URL("http://172.20.10.5:8080/recommend_jobs");
+            URL url = new URL("http://172.21.173.59:8080/recommend_jobs");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
             conn.setRequestMethod("POST");
@@ -68,11 +68,11 @@ public class CommunicateWithPython {
         User user = null;
         try {
             // Python 端的 API 地址
-            URL url = new URL("http://172.20.10.6:5001/return_info");   //后期改
+            URL url = new URL("http://172.21.174.71:5001/return_info");   //后期改
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
             conn.setRequestMethod("POST");
-            conn.setRequestProperty("Content-Type", "multipart/form-data; boundary=--boundary");
+            conn.setRequestProperty("Content-Type", "multipart/form-data; boundary=boundary");
 
             // 发送 PDF 文件
             try (OutputStream os = conn.getOutputStream();
@@ -80,7 +80,6 @@ public class CommunicateWithPython {
                 os.write(("--boundary\r\n" +
                         "Content-Disposition: form-data; name=\"file\"; filename=\"" + pdfFile.getName() + "\"\r\n" +
                         "Content-Type: application/pdf\r\n\r\n").getBytes());
-
                 byte[] buffer = new byte[4096];
                 int bytesRead;
                 while ((bytesRead = fis.read(buffer)) != -1) {

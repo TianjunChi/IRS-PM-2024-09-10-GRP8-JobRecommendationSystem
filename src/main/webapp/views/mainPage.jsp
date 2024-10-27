@@ -28,7 +28,7 @@
         .container {
             display: flex;
             margin: 20px;
-            flex-direction: column; /* 修改为列布局 */
+            flex-direction: column;
         }
         .sidebar {
             max-width: 250px;
@@ -95,7 +95,7 @@
 <body>
 <!-- Header section -->
 <div class="header">
-    <span>Welcome, ${username}</span>
+    <span>Welcome, ${user.userName}</span>
 </div>
 
 <!-- Main content section -->

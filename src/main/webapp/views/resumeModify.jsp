@@ -93,59 +93,59 @@
             <label for="emailAddress">Email:</label>
             <input type="text" id="emailAddress" name="emailAddress" value="${user.emailAddress}" required>
 
-            <label for="degree">Degree:</label>
-            <select id="degree" name="degree">
-                <option value="Associate degree">Associate degree</option>
-                <option value="Bachelor’s degree (BA, BS, B.Eng., etc.)">Bachelor’s degree (BA, BS, B.Eng., etc.)</option>
-                <option value="Master’s degree (MA, MS, M.Eng., MBA, etc.)">Master’s degree (MA, MS, M.Eng., MBA, etc.)</option>
-                <option value="Other doctoral degree (Ph.D, Ed.D., etc.)">Other doctoral degree (Ph.D, Ed.D., etc.)</option>
-                <option value="Primary/elementary school">Primary/elementary school</option>
-                <option value="Professional degree (JD, MD, etc.)">Professional degree (JD, MD, etc.)</option>
-                <option value="Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)">Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)</option>
-                <option value="Some college/university study without earning a degree">Some college/university study without earning a degree</option>
-            </select>
+                <label for="degree">Degree:</label>
+                <select id="degree" name="degree">
+                    <option value="Associate degree" ${user.degree == 'Associate degree' ? 'selected' : ''}>Associate degree</option>
+                    <option value="Bachelor’s degree (BA, BS, B.Eng., etc.)" ${user.degree == 'Bachelor’s degree (BA, BS, B.Eng., etc.)' ? 'selected' : ''}>Bachelor’s degree (BA, BS, B.Eng., etc.)</option>
+                    <option value="Master’s degree (MA, MS, M.Eng., MBA, etc.)" ${user.degree == 'Master’s degree (MA, MS, M.Eng., MBA, etc.)' ? 'selected' : ''}>Master’s degree (MA, MS, M.Eng., MBA, etc.)</option>
+                    <option value="Other doctoral degree (Ph.D, Ed.D., etc.)" ${user.degree == 'Other doctoral degree (Ph.D, Ed.D., etc.)' ? 'selected' : ''}>Other doctoral degree (Ph.D, Ed.D., etc.)</option>
+                    <option value="Primary/elementary school" ${user.degree == 'Primary/elementary school' ? 'selected' : ''}>Primary/elementary school</option>
+                    <option value="Professional degree (JD, MD, etc.)" ${user.degree == 'Professional degree (JD, MD, etc.)' ? 'selected' : ''}>Professional degree (JD, MD, etc.)</option>
+                    <option value="Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)" ${user.degree == 'Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)' ? 'selected' : ''}>Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)</option>
+                    <option value="Some college/university study without earning a degree" ${user.degree == 'Some college/university study without earning a degree' ? 'selected' : ''}>Some college/university study without earning a degree</option>
+                </select>
 
-            <label for="major">Major:</label>
-            <select id="major" name="major">
-                <option value="A business discipline (ex. accounting, finance, marketing)">A business discipline (ex. accounting, finance, marketing)</option>
-                <option value="A health science (ex. nursing, pharmacy, radiology)">A health science (ex. nursing, pharmacy, radiology)</option>
-                <option value="A humanities discipline (ex. literature, history, philosophy)">A humanities discipline (ex. literature, history, philosophy)</option>
-                <option value="A natural science (ex. biology, chemistry, physics)">A natural science (ex. biology, chemistry, physics)</option>
-                <option value="A social science (ex. anthropology, psychology, political science)">A social science (ex. anthropology, psychology, political science)</option>
-                <option value="Another engineering discipline (ex. civil, electrical, mechanical)">Another engineering discipline (ex. civil, electrical, mechanical)</option>
-                <option value="Computer science, computer engineering, or software engineering">Computer science, computer engineering, or software engineering</option>
-                <option value="Fine arts or performing arts (ex. graphic design, music, studio art)">Fine arts or performing arts (ex. graphic design, music, studio art)</option>
-                <option value="Information systems, information technology, or system administration">Information systems, information technology, or system administration</option>
-                <option value="Web development or web design">Web development or web design</option>
-                <option value="Mathematics or statistics">Mathematics or statistics</option>
-            </select>
+                <label for="major">Major:</label>
+                <select id="major" name="major">
+                    <option value="A business discipline (ex. accounting, finance, marketing)" ${user.major == 'A business discipline (ex. accounting, finance, marketing)' ? 'selected' : ''}>A business discipline (ex. accounting, finance, marketing)</option>
+                    <option value="A health science (ex. nursing, pharmacy, radiology)" ${user.major == 'A health science (ex. nursing, pharmacy, radiology)' ? 'selected' : ''}>A health science (ex. nursing, pharmacy, radiology)</option>
+                    <option value="A humanities discipline (ex. literature, history, philosophy)" ${user.major == 'A humanities discipline (ex. literature, history, philosophy)' ? 'selected' : ''}>A humanities discipline (ex. literature, history, philosophy)</option>
+                    <option value="A natural science (ex. biology, chemistry, physics)" ${user.major == 'A natural science (ex. biology, chemistry, physics)' ? 'selected' : ''}>A natural science (ex. biology, chemistry, physics)</option>
+                    <option value="A social science (ex. anthropology, psychology, political science)" ${user.major == 'A social science (ex. anthropology, psychology, political science)' ? 'selected' : ''}>A social science (ex. anthropology, psychology, political science)</option>
+                    <option value="Another engineering discipline (ex. civil, electrical, mechanical)" ${user.major == 'Another engineering discipline (ex. civil, electrical, mechanical)' ? 'selected' : ''}>Another engineering discipline (ex. civil, electrical, mechanical)</option>
+                    <option value="Computer science, computer engineering, or software engineering" ${user.major == 'Computer science, computer engineering, or software engineering' ? 'selected' : ''}>Computer science, computer engineering, or software engineering</option>
+                    <option value="Fine arts or performing arts (ex. graphic design, music, studio art)" ${user.major == 'Fine arts or performing arts (ex. graphic design, music, studio art)' ? 'selected' : ''}>Fine arts or performing arts (ex. graphic design, music, studio art)</option>
+                    <option value="Information systems, information technology, or system administration" ${user.major == 'Information systems, information technology, or system administration' ? 'selected' : ''}>Information systems, information technology, or system administration</option>
+                    <option value="Web development or web design" ${user.major == 'Web development or web design' ? 'selected' : ''}>Web development or web design</option>
+                    <option value="Mathematics or statistics" ${user.major == 'Mathematics or statistics' ? 'selected' : ''}>Mathematics or statistics</option>
+                </select>
 
-            <label for="skills">Skills:</label>
-            <input type="text" id="skills" name="skills" value="${user.skills}">
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" name="skills" value="${user.skills}">
 
-            <label for="yearsCoding">Years Coding:</label>
-            <select id="yearsCoding" name="yearsCoding">
-                <option value="0-2 years">0-2 years</option>
-                <option value="3-5 years">3-5 years</option>
-                <option value="6-8 years">6-8 years</option>
-                <option value="9-11 years">9-11 years</option>
-                <option value="12-14 years">12-14 years</option>
-                <option value="15-17 years">15-17 years</option>
-                <option value="18-20 years">18-20 years</option>
-                <option value="21-23 years">21-23 years</option>
-                <option value="24-26 years">24-26 years</option>
-                <option value="27-29 years">27-29 years</option>
-                <option value="30 or more years">30 or more years</option>
-            </select>
+                <label for="yearsCoding">Years Coding:</label>
+                <select id="yearsCoding" name="yearsCoding">
+                    <option value="0-2 years" ${user.yearsCoding == '0-2 years' ? 'selected' : ''}>0-2 years</option>
+                    <option value="3-5 years" ${user.yearsCoding == '3-5 years' ? 'selected' : ''}>3-5 years</option>
+                    <option value="6-8 years" ${user.yearsCoding == '6-8 years' ? 'selected' : ''}>6-8 years</option>
+                    <option value="9-11 years" ${user.yearsCoding == '9-11 years' ? 'selected' : ''}>9-11 years</option>
+                    <option value="12-14 years" ${user.yearsCoding == '12-14 years' ? 'selected' : ''}>12-14 years</option>
+                    <option value="15-17 years" ${user.yearsCoding == '15-17 years' ? 'selected' : ''}>15-17 years</option>
+                    <option value="18-20 years" ${user.yearsCoding == '18-20 years' ? 'selected' : ''}>18-20 years</option>
+                    <option value="21-23 years" ${user.yearsCoding == '21-23 years' ? 'selected' : ''}>21-23 years</option>
+                    <option value="24-26 years" ${user.yearsCoding == '24-26 years' ? 'selected' : ''}>24-26 years</option>
+                    <option value="27-29 years" ${user.yearsCoding == '27-29 years' ? 'selected' : ''}>27-29 years</option>
+                    <option value="30 or more years" ${user.yearsCoding == '30 or more years' ? 'selected' : ''}>30 or more years</option>
+                </select>
 
             <label for="hometown">Hometown:</label>
             <input type="text" id="hometown" name="hometown" value="${user.hometown}">
 
             <label for="hobby">Hobby:</label>
             <div class="radio-group">
-                <input type="radio" id="hobbyTrue" name="hobby" value="true" ${user.hobby == 'true' ? 'checked' : ''}>
+                <input type="radio" id="hobbyTrue" name="hobby" value="True" ${user.hobby == 'True' ? 'checked' : ''}>
                 <label for="hobbyTrue">True</label>
-                <input type="radio" id="hobbyFalse" name="hobby" value="false" ${user.hobby == 'false' ? 'checked' : ''}>
+                <input type="radio" id="hobbyFalse" name="hobby" value="False" ${user.hobby == 'False' ? 'checked' : ''}>
                 <label for="hobbyFalse">False</label>
             </div>
 
