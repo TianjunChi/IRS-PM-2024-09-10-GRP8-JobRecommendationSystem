@@ -27,4 +27,5 @@ Result:https://drive.google.com/drive/folders/1cq1xRHbMgu-eXbBJS3-L9SbCTnPjGWoA?
 * `user_clean.csv`: the cleaned user data
 * `new_user.ipynb`: process user data into onehot or list and recommend jobs
 ## Section4 [Feng Yuan]Web Development
-### 4.1 Web UI
+### 4.1 Web app
+* `src/main`: directory for webapp written in Java
