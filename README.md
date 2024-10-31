@@ -31,5 +31,5 @@ Dataset:https://drive.google.com/drive/folders/1cq1xRHbMgu-eXbBJS3-L9SbCTnPjGWoA
 * `src/main`: directory for webapp written in Java
 
 ## Section5 Videos
-![Video1](image/video.jpg)
+![Video](image/video.jpg)
 (https://youtu.be/q4_aInPVlxs)
