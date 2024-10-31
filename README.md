@@ -1,4 +1,4 @@
-# IRS-PM-2024-09-10-GRP8-JobRecommendationSystem
+# PRS-PM-2024-10-31-GRP2-JobRecommendationSystem
 ## Section1 [CHi Tianjun]Data Processing
 ### 1.1 user data process 
 * `user_data_process.ipynb`: clean and select relevant data from original user dataset and generate new dataset
@@ -9,7 +9,7 @@
 * `test.txt`: testing set
 * `relation.txt`: relationship list to construct knowledge graph
 
-Result:https://drive.google.com/drive/folders/1cq1xRHbMgu-eXbBJS3-L9SbCTnPjGWoA?usp=drive_link
+Dataset:https://drive.google.com/drive/folders/1cq1xRHbMgu-eXbBJS3-L9SbCTnPjGWoA?usp=drive_link
 ## Section2 [Shi Diwei]Resume Information Extraction
 ### 2.1 pdf/word Resume to picture
 ### 2.2 OCR recognizes text in pictures
@@ -31,7 +31,6 @@ Result:https://drive.google.com/drive/folders/1cq1xRHbMgu-eXbBJS3-L9SbCTnPjGWoA?
 * `src/main`: directory for webapp written in Java
 
 ## Section5 Videos
-Video
 ![Video1](image/video1.jpg)
 [Watch Video1](https://www.youtube.com/watch?v=bCVQiMfwemU)
 
